@@ -16,6 +16,8 @@ namespace HomeworkTheme04ConsoleApp
 
             Console.Write("Введите количество столбцов в будущей матрице: ");
             int col = int.Parse(Console.ReadLine());
+
+            int[,] matrix = new int[row, col];
         }
     }
 }
