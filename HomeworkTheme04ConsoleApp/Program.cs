@@ -40,6 +40,13 @@ namespace HomeworkTheme04ConsoleApp
             Console.Write("Введите длину последовательности: ");
             int lengthArray = int.Parse(Console.ReadLine());
 
+            int[] userArray = new int[lengthArray];
+
+            Console.WriteLine($"Введите {lengthArray} элементов массива");
+            for (int i = 0; i < lengthArray; i++)
+            {
+                userArray[i] = int.Parse(Console.ReadLine());
+            }
             Console.ReadKey();
         }
     }
