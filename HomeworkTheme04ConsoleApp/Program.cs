@@ -19,18 +19,22 @@ namespace HomeworkTheme04ConsoleApp
 
             int[,] matrix = new int[row, col];
 
+            int sum = 0;
+
             Random random = new Random();
 
             for (int i = 0; i < row; i++)
             {
                 for (int j = 0; j < col; j++)
                 {
-                    matrix[i, j] = random.Next(-100,101);
+                    matrix[i, j] = random.Next(0,10);
                     Console.Write($" {matrix[i, j]}\t");
+                    sum += matrix[i, j];
                 }
                 Console.WriteLine();
             }
 
+            Console.WriteLine($"Cуммa всех элементов этой матрицы: {sum} ");
             Console.ReadKey();
         }
     }
