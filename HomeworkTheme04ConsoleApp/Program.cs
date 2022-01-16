@@ -27,7 +27,7 @@ namespace HomeworkTheme04ConsoleApp
             {
                 for (int j = 0; j < col; j++)
                 {
-                    matrix[i, j] = random.Next(0,10);
+                    matrix[i, j] = random.Next(0, 10);
                     Console.Write($" {matrix[i, j]}\t");
                     sum += matrix[i, j];
                 }
@@ -47,6 +47,17 @@ namespace HomeworkTheme04ConsoleApp
             {
                 userArray[i] = int.Parse(Console.ReadLine());
             }
+
+            int minValueUserArray = int.MaxValue;
+            for (int i = 0; i < lengthArray; i++)
+            {
+                if (userArray[i]<minValueUserArray)
+                {
+                    minValueUserArray = userArray[i];
+                }
+            }
+
+            Console.WriteLine($"Наименьший элемент в данном массиве {minValueUserArray}");
             Console.ReadKey();
         }
     }
