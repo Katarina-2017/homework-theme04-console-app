@@ -18,6 +18,20 @@ namespace HomeworkTheme04ConsoleApp
             int col = int.Parse(Console.ReadLine());
 
             int[,] matrix = new int[row, col];
+
+            Random random = new Random();
+
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    matrix[i, j] = random.Next(-100,101);
+                    Console.Write($" {matrix[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+
+            Console.ReadKey();
         }
     }
 }
