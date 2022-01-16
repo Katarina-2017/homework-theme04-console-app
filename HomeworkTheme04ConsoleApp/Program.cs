@@ -10,7 +10,12 @@ namespace HomeworkTheme04ConsoleApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Задание 1. Случайная матрица");
+            Console.Write("Введите количество строк в будущей матрице: ");
+            int row = int.Parse(Console.ReadLine());
 
+            Console.Write("Введите количество столбцов в будущей матрице: ");
+            int col = int.Parse(Console.ReadLine());
         }
     }
 }
