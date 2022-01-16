@@ -35,6 +35,11 @@ namespace HomeworkTheme04ConsoleApp
             }
 
             Console.WriteLine($"Cуммa всех элементов этой матрицы: {sum} ");
+
+            Console.WriteLine("Задание 2. Наименьший элемент в последовательности");
+            Console.Write("Введите длину последовательности: ");
+            int lengthArray = int.Parse(Console.ReadLine());
+
             Console.ReadKey();
         }
     }
