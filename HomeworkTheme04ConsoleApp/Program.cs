@@ -58,6 +58,11 @@ namespace HomeworkTheme04ConsoleApp
             }
 
             Console.WriteLine($"Наименьший элемент в данном массиве {minValueUserArray}");
+
+            Console.WriteLine("Задание 3. Игра \"Угадай число\"");
+            Console.Write("Введите верхнюю границу диапазона: ");
+            int userNumber = int.Parse(Console.ReadLine());
+
             Console.ReadKey();
         }
     }
