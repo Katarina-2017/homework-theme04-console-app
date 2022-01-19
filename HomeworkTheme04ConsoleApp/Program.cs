@@ -66,25 +66,37 @@ namespace HomeworkTheme04ConsoleApp
             Random random = new Random();
             int randomNumber = random.Next(0, userNumber);
 
-            int inputNumber;
-
             while (true)
             {
                 Console.WriteLine("Введите загаданное программой число:");
-                inputNumber = int.Parse(Console.ReadLine());
-                if (inputNumber < randomNumber)
+                string userString = Console.ReadLine();
+
+                if (String.IsNullOrEmpty(userString))
                 {
-                    Console.WriteLine("Введенное число меньше загадонного программой");
-                    continue;
-                } else if (inputNumber > randomNumber)
+                    Console.WriteLine($"Число, загадонное программой было {randomNumber}");
+                    break;
+                }
+                else if (int.TryParse(userString, out var numberResult))
                 {
-                    Console.WriteLine("Введенное число больше загадонного программой");
-                    continue;
+                    if (numberResult < randomNumber)
+                    {
+                        Console.WriteLine("Введенное число меньше загадонного программой");
+
+                    }
+                    else if (numberResult > randomNumber)
+                    {
+                        Console.WriteLine("Введенное число больше загадонного программой");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Поздравляем!!! Вы угадали число, загадонное программой!!!");
+                        break;
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Поздравляем!!! Вы угадали число, загадонное программой!!!");
-                    break;
+                    Console.WriteLine("Упс, некорректный ввод, продолжаем...");
                 }
             }
 
